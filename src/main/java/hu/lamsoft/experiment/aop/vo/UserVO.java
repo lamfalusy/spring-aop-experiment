@@ -1,6 +1,6 @@
 package hu.lamsoft.experiment.aop.vo;
 
-public class UserVO {
+public class UserVO extends BaseVO {
 
 	private String name;
 
