@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWordController {
+public class HelloWorldController {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(HelloWordController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(HelloWorldController.class);
 	
 	@RequestMapping("/helloworld")
-	public String helloWorld() {
-		LOGGER.info("HelloWorld invoked.");
+	public String helloworld() {
+		LOGGER.info("Hello world invoked.");
 		return "Hello World";
 	}
 	

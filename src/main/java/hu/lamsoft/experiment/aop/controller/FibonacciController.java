@@ -6,14 +6,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import hu.lamsoft.experiment.aop.annotation.EnablePerformanceLogging;
+
 @RestController
 public class FibonacciController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(FibonacciController.class);
 	
+	@EnablePerformanceLogging
 	@RequestMapping("/fibonacci/{n}")
 	public long calcFibonacci(@PathVariable(value="n") int n) {
-		LOGGER.info("Calc Fibonacci invoked.");
+		LOGGER.info("Calc Fibonacci invoked with n="+n+".");
 		return fibonacci(n);
 	}
 	
